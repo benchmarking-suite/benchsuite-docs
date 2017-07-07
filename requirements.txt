@@ -4,14 +4,11 @@
 # Autodoc needed modules
 #
 
-# Install the benchsuite.controller module. This will also install automatically all the dependencies
-# (ReadTheDocs executes pip from the project root)
--e .
-
 
 # Since we want to include also the documentation for the benchsuite.core module, we take it from source to get the
 # latest version
 -e git+https://github.com/benchmarking-suite/benchsuite-core.git#egg=benchsuite.core
+-e git+https://github.com/benchmarking-suite/benchsuite-controller.git#egg=benchsuite.controller
 
 # extension to correctly parse the Python 3 type hints
 sphinx-autodoc-typehints
