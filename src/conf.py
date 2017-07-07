@@ -168,14 +168,22 @@ texinfo_documents = [
 ]
 
 
+#
+# Hack to generate REST API documentation from the swagger json specification. We first dum the specs to a json and
+# then repalce the {{currentDir}} placeholder in the rest.rst file with the actual location of the dumped file
+#
+
 import os
 from benchsuite.rest.app import dump_swagger_specs
-dump_swagger_specs()
+
+if not os.path.isfile('swagger-apiv1.json'):
+    dump_swagger_specs()
 
 cwd = os.getcwd()
 
-with open("rest.rst.tpl", "rt") as fin:
-    with open("rest.rst", "wt") as fout:
-        for line in fin:
-            fout.write(line.replace('{{currentDir}}', cwd))
+if not os.path.isfile("rest.rst"):
+    with open("rest.tpl.rst", "rt") as fin:
+        with open("rest.rst", "wt") as fout:
+            for line in fin:
+                fout.write(line.replace('{{currentDir}}', cwd))
 

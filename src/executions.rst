@@ -9,7 +9,7 @@ Executions
 Single Step Execution
 **********************
 
-The sin
+The single step execution executes one or more benchmarks
 
 
 **********************
