@@ -37,7 +37,8 @@ The Benchmarking Suite configuration directory contains two sub-directories:
 
 While the benchmark configuration files in this repository are directly usable from the Benchmarking Suite, the providers configuration files must be customized (e.g. access credentials).
 
-# Quick Start
+Quick Start Config
+==================
 Download the repository content and set the `BENCHSUITE_CONFIG_FOLDER` environment variable.
 ~~~
 git clone https://github.com/benchmarking-suite/benchsuite-configuration.git
@@ -49,7 +50,8 @@ echo "export BENCHSUITE_CONFIG_FOLDER=`pwd`/benchsuite-configuration" >> ~/.bash
 source ~/.bashrc
 ~~~
 
-### Example: Amazon AWS provider
+Example: Amazon AWS provider
+============================
 
 Make your own provider configuration file starting from the provided template
 ~~~
