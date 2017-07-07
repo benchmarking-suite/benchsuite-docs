@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Benchmarking Suite'
-copyright = '2017, Gabriele Giammatteo'
+copyright = '2017, Engineering Ingegneria Informatica S.p.A.'
 author = 'Gabriele Giammatteo'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -82,7 +82,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
