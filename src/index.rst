@@ -1,7 +1,4 @@
-.. Benchmarking Suite documentation master file, created by
-   sphinx-quickstart on Thu Jul  6 16:59:30 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. Benchmarking Suite documentation
 
 Welcome to Benchmarking Suite's documentation!
 ==============================================
@@ -18,7 +15,7 @@ Welcome to Benchmarking Suite's documentation!
 
 Purpose
 =======
-The Benchmarking Suite has the main purpose of autoamting
+The Benchmarking Suite has the main purpose of autoamting the execution of several tool
 
 .. automodule:: benchsuite.controller
    :members:

@@ -11,4 +11,4 @@
 -e git+https://github.com/benchmarking-suite/benchsuite-controller.git#egg=benchsuite.controller
 
 # extension to correctly parse the Python 3 type hints
-sphinx-autodoc-typehints
+sphinx-autodoc-napoleon-typehints
