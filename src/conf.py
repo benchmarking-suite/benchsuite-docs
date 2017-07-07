@@ -30,7 +30,7 @@ source_suffix = ['.rst']
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx_autodoc_napoleon_typehints']
+extensions = ['sphinx.ext.autodoc', 'sphinx_autodoc_napoleon_typehints','sphinxcontrib.swaggerdoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Benchmarking Suite'
-copyright = '2017, Engineering Ingegneria Informatica S.p.A.Gabriele Giammatteo'
+copyright = '2017, Engineering Ingegneria Informatica S.p.A.'
 author = 'Gabriele Giammatteo'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -168,4 +168,14 @@ texinfo_documents = [
 ]
 
 
+import os
+from benchsuite.rest.app import dump_swagger_specs
+dump_swagger_specs()
+
+cwd = os.getcwd()
+
+with open("rest.rst.tpl", "rt") as fin:
+    with open("rest.rst", "wt") as fout:
+        for line in fin:
+            fout.write(line.replace('{{currentDir}}', cwd))
 

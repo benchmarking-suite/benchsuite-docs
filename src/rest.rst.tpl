@@ -7,6 +7,6 @@ REST Server
    IT does not work at the moment becuase flask restplus generates (see: https://github.com/noirbizarre/flask-restplus/issues/196)
 
 
-
+.. swaggerv2doc:: file://{{currentDir}}/swagger-apiv1.json
 
 The Endsd
