@@ -1,4 +1,7 @@
--r build_requirements.txt
+
+# put this before the benchsuite.controller becaure the latter needs the former during the build.
+-e git+https://github.com/gabrielegiammatteo/build_manpage#egg=argparse-manpage
+
 #
 # Autodoc needed modules
 #
