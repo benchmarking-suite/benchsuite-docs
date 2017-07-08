@@ -1,5 +1,4 @@
--e git+https://github.com/gabrielegiammatteo/build_manpage#egg=argparse-manpage
-
+-r build_requirements.txt
 #
 # Autodoc needed modules
 #
