@@ -1,4 +1,4 @@
-
+-e git+https://github.com/gabrielegiammatteo/build_manpage#egg=argparse-manpage
 
 #
 # Autodoc needed modules
@@ -20,4 +20,3 @@ sphinx-argparse
 -e git+https://github.com/gabrielegiammatteo/sphinx-swaggerdoc#egg=sphinxcontrib-swaggerdoc
 
 # build dependency of benchsuite.controller
--e git+https://github.com/gabrielegiammatteo/build_manpage#egg=argparse-manpage
