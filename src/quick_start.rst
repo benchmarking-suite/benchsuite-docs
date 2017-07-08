@@ -15,7 +15,7 @@ First of all, install the Benchmarking Controller from PyPI
 
         .. code-block:: bash
 
-            virtualenv -p benchmarking-suite
+            virtualenv -p /usr/bin/python3.5 benchmarking-suite
             source benchsuite/bin/activate
 
 
