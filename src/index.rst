@@ -17,14 +17,3 @@ Welcome to Benchmarking Suite's documentation!
 
 
 .. include:: quick_start.rst
-
-
-.. The Benchmarking Suite has the main purpose of autoamting the execution of several tool
-
-
-*************
-Compatibility
-*************
-The Benchmarking Suite is pure Python 3.6+
-
-

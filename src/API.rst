@@ -2,7 +2,7 @@
 API Reference
 ###########################
 
-.. autoclass:: benchsuite.controller.BenchmarkingController
+.. autoclass:: benchsuite.controller.controller.BenchmarkingController
    :members:
 
 .. automodule:: benchsuite.core.model.benchmark
