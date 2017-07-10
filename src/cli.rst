@@ -3,5 +3,7 @@ Command line tool
 #################
 
 .. argparse::
-   :ref: benchsuite.cli.get_options_parser
+   :ref: benchsuite.commands.argument_parser.get_options_parser
    :prog: benchsuite
+
+Fine
