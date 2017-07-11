@@ -7,7 +7,7 @@
 # latest version
 
 -e git+https://github.com/benchmarking-suite/benchsuite-core.git#egg=benchsuite.core
--e git+https://github.com/benchmarking-suite/benchsuite-controller.git#egg=benchsuite.controller
+-e git+https://github.com/benchmarking-suite/benchsuite-cli.git#egg=benchsuite.controller
 -e git+https://github.com/benchmarking-suite/benchsuite-rest.git#egg=benchsuite.rest
 
 # extension to correctly parse the Python 3 type hints

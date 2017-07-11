@@ -3,16 +3,11 @@ Quick Start
 ###########
 
 
-The Benchmarking Suite is package and delivered through PyPI.
-
-.. code-block:: bash
-
-  $ pip install benchsuite.controller
-
+The Benchmarking Suite is package and distributed through PyPI_.
 
 .. important::
 
-    The Benchmarking Suite requires Python 3.6+. If it is not the default version for your system, it is recommended
+    The Benchmarking Suite requires Python 3.6+. If it is not the default version in you system, it is recommended
     to create a virtualenv:
 
         .. code-block:: bash
@@ -20,13 +15,12 @@ The Benchmarking Suite is package and delivered through PyPI.
             virtualenv -p /usr/bin/python3.6 benchmarking-suite
             source benchsuite/bin/activate
 
-.. warning::
+Install the ``benchsuite.controller`` component:
 
-    If you are having an error "ModuleNotFoundError: No module named 'benchsuite.commands'", try to remove
+.. code-block:: bash
 
-        .. code-block:: bash
+  $ pip install benchsuite.controller
 
-            rm lib/python3.6/site-package
 
 
 .. Before using the Benchmarking Suite, it is needed to provide a valid configuration for the benchmark tests and the
@@ -101,3 +95,4 @@ References
 .. target-notes::
 
 .. _benchmarking-configuration: https://github.com/benchmarking-suite/benchsuite-configuration
+.. _PyPI: https://python.org/pypi/benchsuite.controller/
