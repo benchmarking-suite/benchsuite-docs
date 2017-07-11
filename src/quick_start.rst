@@ -19,7 +19,7 @@ Install the ``benchsuite.controller`` component:
 
 .. code-block:: bash
 
-  $ pip install benchsuite.controller
+  $ pip install benchsuite.stdlib benchsuite.cli
 
 
 
