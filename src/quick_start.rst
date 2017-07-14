@@ -17,21 +17,6 @@ The Benchmarking Suite is package and distributed through PyPI_.
             virtualenv -p /usr/bin/python3.6 benchmarking-suite
             source benchsuite/bin/activate
 
-The Benchmarking Suite is distributed in four modules:
-
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.core``   | the core library (all other  modules depend on it) with the definition of      |
-|                       | types and the fundamental framework for the extension of the Benchmarking      |
-|                       | Suite                                                                          |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.stdlib`` | a collection of benchmark tests configuration files and support for some Cloud |
-|                       | Providers                                                                      |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.cli``    | a bash command line tool to manage tests and results                           |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
-+-----------------------+--------------------------------------------------------------------------------+
-
 Let's start by installing the command line tool and the standard library:
 
 .. code-block:: bash
