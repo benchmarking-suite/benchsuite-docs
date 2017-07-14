@@ -2,6 +2,8 @@
 Quick Start
 ###########
 
+Install
+-------
 
 The Benchmarking Suite is package and distributed through PyPI_.
 
@@ -15,39 +17,40 @@ The Benchmarking Suite is package and distributed through PyPI_.
             virtualenv -p /usr/bin/python3.6 benchmarking-suite
             source benchsuite/bin/activate
 
-Install the ``benchsuite.controller`` component:
+The Benchmarking Suite is distributed in four modules:
+
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.core``   | the core library (all other  modules depend on it) with the definition of      |
+|                       | types and the fundamental framework for the extension of the Benchmarking      |
+|                       | Suite                                                                          |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.stdlib`` | a collection of benchmark tests configuration files and support for some Cloud |
+|                       | Providers                                                                      |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.cli``    | a bash command line tool to manage tests and results                           |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
++-----------------------+--------------------------------------------------------------------------------+
+
+Let's start by installing the command line tool and the standard library:
 
 .. code-block:: bash
 
   $ pip install benchsuite.stdlib benchsuite.cli
 
+This will make available the ``benchsuite`` bash command and will copy the standard benchmark tests configuration into the default configuration location (located under ``~/.config/benchmarking-suite/benchmarks``).
 
+Configure
+---------
 
-.. Before using the Benchmarking Suite, it is needed to provide a valid configuration for the benchmark tests and the
-    service providers that will be managed. A good starting point is the basic configuration provided in the
-    `benchmarking-configuration`_ GitHub repository. To start using it, download the repository and set the
-    BENCHSUITE_CONFIG_FOLDER environment variable.
+Before executing a benchmark, we have to configure at least one Service Provider. The ``benchsuite.stdlib`` provides some template (located under ``~/.config/benchmarking-suite/providers``).
 
+For instance, for Amazon EC2 we can start from the template and complete it:
 
-Download the basic configuration from the `benchmarking-configuration`_ GitHub repository
+.. code-block::bash
 
-.. code-block:: bash
+    cp ~/.config/benchmarking-suite/providers/amazon.conf.example my-amazon.conf
 
-    git clone https://github.com/benchmarking-suite/benchsuite-configuration.git
-    echo "export BENCHSUITE_CONFIG_FOLDER=`pwd`/benchsuite-configuration" >> ~/.bashrc
-    source ~/.bashrc
-
-
-.. The basic configuration contains already usable benchmarking tests, but not valid Service Provider configurations
-    (because it needs user-specific information). Therefore, before using the Benchmarking Suite, you need to create your own
-    Service Provider(s) configuration files.
-
-Create your own Service Provider configuration starting from a template and filling the missing information. For
-instance, to create a configuration for Amazon EC2:
-
-.. code-block:: bash
-
-    cp $BENCHSUITE_CONFIG_FOLDER/providers/amazon.conf.example $BENCHSUITE_CONFIG_FOLDER/providers/my-amazon.conf
 
 Open and edit ``my-amazon.conf``
 
@@ -74,13 +77,23 @@ Open and edit ``my-amazon.conf``
     vm_user = ubuntu
     platform = ubuntu_16
 
+In this case we will provide this file directly to the command line tool, but we can also configure our own configuration directory, put all our service providers and benchmarking tests configuration there and refer to them by name (see XXX seciton).
+
+
+Run!
+----
 Now you can execute your first benchmark test:
 
 .. code-block:: bash
 
-    python -m benchsuite.cli exec --provider my-amazon --service ubuntu_micro --tool ycsb-mongodb --workload WorkloadA
+    python -m benchsuite.cli exec --provider my-amazon.conf --service ubuntu_micro --tool ycsb-mongodb --workload WorkloadA
 
-Now you can also add the rest interface
+
+
+Go REST
+--------
+
+Enable the REST server is very simple:
 
 .. code-block:: bash
 
@@ -88,10 +101,9 @@ Now you can also add the rest interface
     benchsuite-rest start
     tail -f benchsuite-rest.log
 
-
-**********
 References
-**********
+==========
+
 .. target-notes::
 
 .. _benchmarking-configuration: https://github.com/benchmarking-suite/benchsuite-configuration
