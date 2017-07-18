@@ -168,6 +168,14 @@ texinfo_documents = [
 ]
 
 
+
+# source http://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        ],
+     }
+
 #
 # Hack to generate REST API documentation from the swagger json specification. We first dum the specs to a json and
 # then repalce the {{currentDir}} placeholder in the rest.rst file with the actual location of the dumped file

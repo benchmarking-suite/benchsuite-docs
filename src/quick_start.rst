@@ -87,7 +87,7 @@ Enable the REST server is very simple:
     tail -f benchsuite-rest.log
 
 References
-==========
+----------
 
 .. target-notes::
 
