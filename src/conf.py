@@ -186,3 +186,4 @@ if not os.path.isfile("rest.rst"):
             for line in fin:
                 fout.write(line.replace('{{currentDir}}', cwd))
 
+
