@@ -92,4 +92,4 @@ References
 .. target-notes::
 
 .. _benchmarking-configuration: https://github.com/benchmarking-suite/benchsuite-configuration
-.. _PyPI: https://python.org/pypi/benchsuite.controller/
+.. _PyPI: https://python.org/pypi/benchsuite.core/
