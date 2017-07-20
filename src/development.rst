@@ -15,10 +15,27 @@
 .. Developed in the ARTIST EU project (www.artist-project.eu) and in the
 .. CloudPerfect EU project (https://cloudperfect.eu/)
 
-#################
-Command line tool
-#################
+###########
+Development
+###########
 
-.. argparse::
-   :ref: benchsuite.cli.argument_parser.get_options_parser
-   :prog: benchsuite
+
+
+Release Steps
+=============
+
+Checklist to release the Benchmarking Suite
+
+For each module to release:
+
+1. increase the version number in `setup.py`
+   
+2. create the source distribution package
+
+   .. code-block:: bash
+
+    python setup.py sdist upload -r pypitest
+   
+2. commit and push everything on GitHub
+
+2. 
