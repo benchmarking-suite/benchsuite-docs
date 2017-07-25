@@ -23,6 +23,6 @@ Configuration
    :maxdepth: 2
    :hidden:
 
-   model
-   configuration
+   providers
+   benchmarks
  

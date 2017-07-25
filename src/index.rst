@@ -42,7 +42,7 @@ Topics
    :maxdepth: 2
 
    quick_start
-   model
+   architecture
    configuration
    executions
    cli
@@ -50,6 +50,7 @@ Topics
    API
    changelog
    development
+   faq
 
 
 Contacts

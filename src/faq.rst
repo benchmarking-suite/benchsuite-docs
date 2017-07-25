@@ -15,8 +15,20 @@
 .. Developed in the ARTIST EU project (www.artist-project.eu) and in the
 .. CloudPerfect EU project (https://cloudperfect.eu/)
 
-*****************
-Service Providers
-*****************
 
-TBD
+####
+FAQs
+####
+
+
+How to clear all stored benchmarking sessions?
+-------------------------------------------------
+
+Sessions are stored in a file in ``~/.local/share/benchmarking-suite/sessions.dat``. Deleting that file, all sessions will be removed. This should be an extreme solution, the more correct way to delete a session is to use the destroy-session command.
+
+----
+
+How to clear all stored executions?
+--------------------------------------
+
+Executions are stored along with the sessions. See previous question: `How to clear all stored benchmarking sessions?`_.

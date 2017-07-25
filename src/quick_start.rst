@@ -26,12 +26,12 @@ The Benchmarking Suite is package and distributed through PyPI_.
 
 .. important::
 
-    The Benchmarking Suite requires Python 3.6+. If it is not the default version in you system, it is recommended
+    The Benchmarking Suite requires Python 3.5+. If it is not the default version in you system, it is recommended
     to create a virtualenv:
 
         .. code-block:: bash
 
-            virtualenv -p /usr/bin/python3.6 benchmarking-suite
+            virtualenv -p /usr/bin/python3.5 benchmarking-suite
             source benchsuite/bin/activate
 
 Let's start by installing the command line tool and the standard library:
@@ -49,7 +49,7 @@ Before executing a benchmark, we have to configure at least one Service Provider
 
 For instance, for Amazon EC2 we can start from the template and complete it:
 
-.. code-block::bash
+.. code-block:: bash
 
     cp ~/.config/benchmarking-suite/providers/amazon.conf.example my-amazon.conf
 
