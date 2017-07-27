@@ -66,7 +66,6 @@ Open and edit ``my-amazon.conf``
     access_id = <your access_id>
     secret_key = <your secret_key>
 
-    [libcloud_extra_params]
     region = us-west-1
     ex_security_group_ids = <id of the security group>
     ex_subnet = <id of the subnet>
