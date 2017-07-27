@@ -28,14 +28,15 @@ Checklist to release the Benchmarking Suite
 
 For each module to release:
 
-1. increase the version number in `setup.py`
+1. increase the version number in the ``__init__py`` file
    
-2. create the source distribution package
+2. create the source distribution package and upload on PYPI (remove the ``-r pypitest`` to upload on the official PYPI)
 
    .. code-block:: bash
 
     python setup.py sdist upload -r pypitest
    
-2. commit and push everything on GitHub
+3. commit and push everything on GitHub
 
-2. 
+4. create a tag on GitHub
+
