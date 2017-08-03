@@ -47,6 +47,7 @@ Topics
    executions
    cli
    rest
+   docker
    API
    changelog
    development
