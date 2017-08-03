@@ -16,7 +16,7 @@
 .. CloudPerfect EU project (https://cloudperfect.eu/)
 
 ###########
-Docekr
+Docker
 ###########
 
 The Benchmarking Suite is also distributed in two different Docker containers. They are available at https://hub.docker.com/r/benchsuite/
