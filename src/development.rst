@@ -19,6 +19,7 @@
 Development
 ###########
 
+This section explains the development, integration and distritbuion process of the Benchmarking Suite. Intended readers are developers.
 
 Continuous Integration
 ======================
@@ -45,3 +46,10 @@ For each module to release:
 
 4. create a tag on GitHub
 
+
+Docker
+======
+
+Docker containers are built automatically from Dockerfiles in the benchsuite-docker repository.
+
+To create a new tag of Docker images, create a tag in the Git repository that starts with "v" (e.g. "v2.0", "v1.2.3", "v1.2.3-beta1", ...)
