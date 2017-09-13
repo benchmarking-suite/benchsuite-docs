@@ -19,10 +19,13 @@
 Architecture
 #################
 
+
+
 Software Modules
 ================
 
-The Benchmarking Suite is distributed in four modules:
+
+The Benchmarking Suite is distributed in five modules:
 
 +-----------------------+--------------------------------------------------------------------------------+
 | ``benchsuite.core``   | the core library (all other  modules depend on it) with the definition of      |
@@ -36,8 +39,10 @@ The Benchmarking Suite is distributed in four modules:
 +-----------------------+--------------------------------------------------------------------------------+
 | ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
 +-----------------------+--------------------------------------------------------------------------------+
-| asd                   | asd                                                                            |
+| ``benchsuite.backend``| connectors for the supported storage backends                                  |
 +-----------------------+--------------------------------------------------------------------------------+
+
+
 
 
 Model
