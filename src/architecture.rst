@@ -36,6 +36,8 @@ The Benchmarking Suite is distributed in four modules:
 +-----------------------+--------------------------------------------------------------------------------+
 | ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
 +-----------------------+--------------------------------------------------------------------------------+
+| asd                   | asd                                                                            |
++-----------------------+--------------------------------------------------------------------------------+
 
 
 Model
@@ -59,8 +61,3 @@ Since it is frequent to execute multiple tests against the same Service Provider
     :align: center
 
 By default, all the executions of the same session share the same **ExecutionEnvironment**.
-
-
-
-
-
