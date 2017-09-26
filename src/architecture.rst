@@ -19,34 +19,23 @@
 Architecture
 #################
 
+The Benchmarking Suite is composed by five main components summarized in the following diagram:
+
+.. image:: images/architecture.svg
+
+- **Core**: defines the main model, the extension framework for the benchmarks and the Cloud providers and the main data representation types;
+- **REST**: a REST server to access all the Benchmarking Suite functionalities;
+- **CLI**: a command line tool (bash-compatible) to access all the Benchmarking Suite functionalities;
+- **Std Library**: a set of selected benchmark tools, including their configurations and the implementation of the required wrapping scripts for the execution and the parsing of results;
+- **Backend Connectors**: a set of connectors to store the Benchmarking Suite executions results on different storage technologies (e.g. MySQL, MongoDB).
+
+The *Core* component is the only required component, the other components are optional. However the Benchmarking Suite installation will miss the functionalities of not-installed modules (e.g. if the *Backend Connectors* is not installed, the execution results will not be stored).
+
+The *User's Cloud Configuration* is the required configuration of the Cloud Providers that the Benchmarking Suite needs to be able to access the *Target Cloud Provider*. It can be specified either as configuration file or as parameter in the execution requests (through the REST or CLI components). Refer to section :doc:`providers` for further details
 
 
-Software Modules
-================
-
-
-The Benchmarking Suite is distributed in five modules:
-
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.core``   | the core library (all other  modules depend on it) with the definition of      |
-|                       | types and the fundamental framework for the extension of the Benchmarking      |
-|                       | Suite                                                                          |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.stdlib`` | a collection of benchmark tests configuration files and support for some Cloud |
-|                       | Providers                                                                      |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.cli``    | a bash command line tool to manage tests and results                           |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.backend``| connectors for the supported storage backends                                  |
-+-----------------------+--------------------------------------------------------------------------------+
-
-
-
-
-Model
-=====
+Design
+======
 
 .. in this section we are using the https://yuml.me/ service to generate UML diagrams on the fly providing the description of the diagram in the URL directly. We split the URL in different lines to improve the readability
 
@@ -66,3 +55,28 @@ Since it is frequent to execute multiple tests against the same Service Provider
     :align: center
 
 By default, all the executions of the same session share the same **ExecutionEnvironment**.
+
+
+Software Modules
+================
+
+In order to address all the different use cases and the installation necessities, the Benchmarking Suite is distributed in five different software modules that can be installed separately:
+
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.core``   | the core library (all other  modules depend on it) with the definition of      |
+|                       | types and the fundamental framework for the extension of the Benchmarking      |
+|                       | Suite                                                                          |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.stdlib`` | a collection of benchmark tests configuration files and support for some Cloud |
+|                       | Providers                                                                      |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.cli``    | a bash command line tool to manage tests and results                           |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
++-----------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.backend``| connectors for the supported storage backends                                  |
++-----------------------+--------------------------------------------------------------------------------+
+
+
+
+

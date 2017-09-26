@@ -87,7 +87,7 @@ Now you can execute your first benchmark test:
 
 .. code-block:: bash
 
-    python -m benchsuite.cli exec --provider my-amazon.conf --service ubuntu_micro --tool ycsb-mongodb --workload WorkloadA
+    benchsuite multiexec --provider my-amazon.conf --service ubuntu_micro ycsb-mongodb:WorkloadA
 
 
 

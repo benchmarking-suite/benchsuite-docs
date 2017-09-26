@@ -29,10 +29,10 @@ Unreleased
 Added
 =====
 - support for MongoDB backend
-- TODO list of available benchmarks and cloud providers (in Cli and REST)
-- TODO field "name" in workload sections in configuration files
-- TODO return node_id (in case of OpenStack) in the REST calls
-- TODO accept provider configuration as string parameter
+- list of available benchmarks and cloud providers (in Cli and REST)
+- field "name" in workload sections in configuration files
+- return node_id (in case of OpenStack) in the REST calls
+- accept provider configuration as string parameter
 
 **************************************
 Benchmarking Suite v2.0.0 - 2017-08-01

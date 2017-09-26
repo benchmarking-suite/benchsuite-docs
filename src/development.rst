@@ -46,6 +46,10 @@ For each module to release:
 
 4. create a tag on GitHub
 
+5. Update the changelog.rst file in the documentation
+
+6. Create a new documentation tag
+
 
 Docker
 ======
