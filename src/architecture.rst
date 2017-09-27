@@ -34,27 +34,33 @@ The *Core* component is the only required component, the other components are op
 The *User's Cloud Configuration* is the required configuration of the Cloud Providers that the Benchmarking Suite needs to be able to access the *Target Cloud Provider*. It can be specified either as configuration file or as parameter in the execution requests (through the REST or CLI components). Refer to section :doc:`providers` for further details
 
 
-Design
-======
+Domain Model
+============
 
 .. in this section we are using the https://yuml.me/ service to generate UML diagrams on the fly providing the description of the diagram in the URL directly. We split the URL in different lines to improve the readability
 
-The Benchmarking Suite is designed to be very generic and extensible. The main concept is the **BenchmarkExecution** that is the execution of a **Benchmark** in one **ExecutionEnvironment** provided by a **ServiceProvider**.
+The core concept in the Benchmarking Suite is the **BenchmarkExecution**. It represents the execution of a **Benchmark** test against an **ExecutionEnvironment** provided from a **ServiceProvider** and produces an **ExecutionResult**.
 
-With this concepts, it is easy to model, for instance, the execution of the *YCSB* benchmark on a *Virtual Machine* provided by *Amazon AWS*.
 
 .. image:: https://yuml.me/diagram/scruffy;dir:TB/class/
-                [ExecutionEnvironment]0..*-1[ServiceProvider],
-                [BenchmarkingExecution]0..*-1[Benchmark],
-                [BenchmarkingExecution]1..*-1[ExecutionEnvironment]
+                [ExecutionEnvironment] *-1  [ServiceProvider],
+                [BenchmarkExecution]   *-1  [Benchmark],
+                [BenchmarkExecution]   *-1  [ExecutionEnvironment],
+                [BenchmarkExecution]   1-1  [ExecutionResult]
     :align: center
 
-Since it is frequent to execute multiple tests against the same Service Provider, the Benchmarking Suite has the concept of **BenchmarkingSession**. that can include one or more executions of the same provider.
+.. note::
 
-.. image:: https://yuml.me/diagram/scruffy;dir:TB/class/[BenchmarkingSession]-1..*[BenchmarkingExecution],[BenchmarkingSession]-1[ServiceProvider],[BenchmarkingExecution]-[ExecutionEnvironment],[ExecutionEnvironment]-1[ServiceProvider].png
+    For instance, following this model we can easily model the execution of YCSB.WorkloadA (the *Benchmark*) on the Virtual Machine with ip=50.1.1.1 (the *ExecutionEnvironment*) provided by Amazon EC2 (the *ServiceProvider*).
+
+Since it is frequent to execute multiple tests against the same Service Provider, the Benchmarking Suite has also the concept of **BenchmarkingSession**. that can gropu one or more executions of the ServiceProvider, using the same ExecutionEnvironment.
+
+.. image:: https://yuml.me/diagram/scruffy;dir:TB/class/
+                [BenchmarkSession] -* [BenchmarkExecution],
+                [BenchmarkSession] -1 [ExecutionEnvironment],
+                [BenchmarkExecution] *-1 [ExecutionEnvironment],
+                [ExecutionEnvironment] -1 [ServiceProvider]
     :align: center
-
-By default, all the executions of the same session share the same **ExecutionEnvironment**.
 
 
 Software Modules
