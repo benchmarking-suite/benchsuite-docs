@@ -25,6 +25,29 @@ The Benchmarking Suite is also distributed in two different Docker containers. T
 benchsuite-multiexec
 ####################
 
+This container can be used to run benchmarks in batch mode.
+
+Get (or update) the image with:
+
+.. code-block:: bash
+
+    docker pull benchsuite/benchsuite-multiexec:dev
+
+Run the container binding the provider and storage (optional) configuration files stored in the local machine and passing the list of tests to execute as parameters (e.g. ``idle:idle5``):
+
+.. code-block:: bash
+
+    docker run -v /home/mypc/amazon.conf:/provider.conf -v /home/mypc/storage.conf:/storage.conf benchsuite/benchsuite-multiexec:dev -p provider.conf -s centos_micro idle:idle5
+
+In case the storage service is running on the local machine, it could be necessary to use the ``--net=host`` option to reach it.
+
+Alternatively, provider configuration can be specified through environment variable:
+
+.. code-block:: bash
+
+    docker run -e BENCHSUITE_PROVIDER="[myconf]...." -e BENCHSUITE_SERVICE_TYPE="centos_micro" -v /home/mypc/storage.conf:/storage.conf benchsuite/benchsuite-multiexec:dev idle:idle5
+
+
 .. TODO: complete section
 
 benchsuite-rest-server

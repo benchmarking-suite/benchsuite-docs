@@ -50,6 +50,8 @@ For each module to release:
 
 6. Create a new documentation tag
 
+7. Create a new Docker tag
+
 
 Docker
 ======
