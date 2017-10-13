@@ -41,10 +41,20 @@ For each module to release:
    .. code-block:: bash
 
     python setup.py sdist upload -r pypitest
-   
+
+3. to test the release from PYPI test:
+
+   .. code-block:: bash
+
+    # create a new virtual env
+    virtualenv -p /usr/bin/python3.5 venv19
+
+    # install the modules to test
+    pip install -v -i https://testpypi.python.org/pypi --extra-index-url https://pypi.python.org/simple/ -U benchsuite.core
+
 3. commit and push everything on GitHub
 
-4. create a tag on GitHub
+4. create a release on GitHub for each module (this will also create a tag)
 
 5. Update the changelog.rst file in the documentation
 

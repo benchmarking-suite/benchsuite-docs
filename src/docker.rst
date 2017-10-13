@@ -41,7 +41,7 @@ Run the container binding the provider and storage (optional) configuration file
 
 In case the storage service is running on the local machine, it could be necessary to use the ``--net=host`` option to reach it.
 
-Alternatively, provider configuration can be specified through environment variable:
+Alternatively, provider and storage configurations can be specified through environment variables: ``BENCHSUITE_PROVIDER`` and ``BENCHSUITE_STORAGE_CONFIG`` respectively.
 
 .. code-block:: bash
 
@@ -54,3 +54,5 @@ benchsuite-rest-server
 ######################
 
 .. TODO: complete section
+
+    TBD

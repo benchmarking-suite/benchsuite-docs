@@ -28,17 +28,31 @@ Unreleased
 
 Added
 =====
+- [item]
+
+**************************************
+Benchmarking Suite v2.1.0
+**************************************
+Release date: 2017-10-13
+
+This minor release introduces some new functionalities and improvement to the tool:
+
 - support for MongoDB backend
 - list of available benchmarks and cloud providers (in Cli and REST)
 - field "name" in workload sections in configuration files
 - return node_id (in case of OpenStack) in the REST calls
 - accept provider configuration as string parameter
+- add tags to sessions/executions (e.g. for the user-id in the QET)
+- provider and storage configurations can be also specified via command line or environment variable
+- improvement and tuning of YCSB, Filebench and DaCapo benchmarks
+
 
 **************************************
-Benchmarking Suite v2.0.0 - 2017-08-01
+Benchmarking Suite v2.0.0
 **************************************
+Release date: 2017-08-01
 
-This is a major release  version of the Benchmarking Suite that introduces several changes and improvements with respect to the Benchmarking Suite 1.x versions.
+This is a major release version of the Benchmarking Suite that introduces several changes and improvements with respect to the Benchmarking Suite 1.x versions.
 
 In the Core library:
 
