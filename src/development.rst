@@ -56,9 +56,9 @@ For each module to release:
 
 4. create a release on GitHub for each module (this will also create a tag)
 
-5. Update the changelog.rst file in the documentation
+5. Update the changelog.rst file in the documentation and the version in conf.py
 
-6. Create a new documentation tag
+6. Commit the documentation on GitHub and create a tag. This will also create a new tag in readthedocs
 
 7. Create a new Docker tag
 
