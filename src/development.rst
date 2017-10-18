@@ -36,7 +36,7 @@ For each module to release:
 
 1. increase the version number in the ``__init__py`` file
    
-2. create the source distribution package and upload on PYPI (remove the ``-r pypitest`` to upload on the official PYPI)
+2. create the source distribution package and upload on PYPI Testing (remove the ``-r pypitest`` to upload on the official PYPI)
 
    .. code-block:: bash
 
@@ -47,10 +47,21 @@ For each module to release:
    .. code-block:: bash
 
     # create a new virtual env
-    virtualenv -p /usr/bin/python3.5 venv19
+    virtualenv -p /usr/bin/python3.5 venvXX
+
+    # activate the virtualenv
+    source venvXX/bin/activate
+
 
     # install the modules to test
     pip install -v -i https://testpypi.python.org/pypi --extra-index-url https://pypi.python.org/simple/ -U benchsuite.core
+
+
+4. upload the distribution packages on PYPI
+
+    .. code-block:: bash
+
+        python setup.py sdist upload
 
 3. commit and push everything on GitHub
 

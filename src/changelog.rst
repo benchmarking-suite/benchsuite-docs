@@ -30,6 +30,18 @@ Added
 =====
 - [item]
 
+
+**************************************
+Benchmarking Suite v2.2.0
+**************************************
+Release date: 2017-10-18
+
+This minor release introduces following improvements:
+
+- support for json configuration files (only for providers and storage at the moment)
+- better handling of network configuration parameters in the provider configuration
+
+
 **************************************
 Benchmarking Suite v2.1.0
 **************************************
