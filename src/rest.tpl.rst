@@ -46,8 +46,8 @@ Alternatively, the provider configuration can be provided directly in the reques
             "provider": {\
                     "class": "benchsuite.stdlib.provider.libcloud.LibcloudComputeProvider",\
                         "name": "ec2-ggiammat",\
-                "driver": "ec2",\
-                "access_id": "<your_access_id>",\
+                        "driver": "ec2",\
+                        "access_id": "<your_access_id>",\
                         "secret_key": "<your_key>",\
                         "region": "us-west-1"\
                 },\
