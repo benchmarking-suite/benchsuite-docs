@@ -74,7 +74,7 @@ author = 'Gabriele Giammatteo'
 # built documents.
 #
 # The short X.Y version.
-version = '2.1.0'
+version = '2.2.0'
 # The full version, including alpha/beta/rc tags.
 release = '2.2.0'
 
