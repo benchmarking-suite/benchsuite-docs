@@ -31,7 +31,7 @@ Get (or update) the image with:
 
 .. code-block:: bash
 
-    docker pull benchsuite/benchsuite-multiexec:dev
+    docker pull benchsuite/benchsuite-multiexec
 
 Run the container binding the provider and storage (optional) configuration files stored in the local machine and passing the list of tests to execute as parameters (e.g. ``idle:idle5``):
 
@@ -53,6 +53,23 @@ Alternatively, provider and storage configurations can be specified through envi
 benchsuite-rest-server
 ######################
 
-.. TODO: complete section
+This image contains the Benchmarking Suite REST SERVER (see :ref:`rest-server-doc` section). When started, the container exposes the REST service on port 5000.
 
-    TBD
+To run the container, just use the Docker CLI:
+
+.. code-block:: bash
+
+    docker run benchsuite/benchsuite-rest-server
+
+The service reads the Benchmarking Suite :ref:`bs-configuration` from the ``/`` directory of the container. For instance, to provide a configuration for the storage (to persist results in the db) mount a file in the container named ``/storage.conf`` or ``/storage.json``:
+
+.. code-block:: bash
+
+    docker run -v my-storage.conf:/storage.conf benchsuite/benchsuite-rest-server
+
+Also providers configuration files can be mounted in the container in the same way:
+
+.. code-block:: bash
+
+    docker run -v my-provider.conf:/providers/my-provider.conf benchsuite/benchsuite-rest-server
+

@@ -60,12 +60,20 @@ For each module to release:
 
 6. Commit the documentation on GitHub and create a tag. This will also create a new tag in readthedocs
 
-7. Create a new Docker tag
+7. Update the ".release" Dockerfiles in benchsuite-docker project
+
+8. Commit benchsuite-docker and create a new tag. This will trigger the creation of a new tag for docker images
+
+
+Documentation
+=============
+
+Documentation is automatically built on ReadTheDocs at every commit
 
 
 Docker
 ======
 
-Docker containers are built automatically from Dockerfiles in the benchsuite-docker repository.
+Docker containers are built automatically from Dockerfiles located in the benchsuite-docker repository.
 
 To create a new tag of Docker images, create a tag in the Git repository that starts with "v" (e.g. "v2.0", "v1.2.3", "v1.2.3-beta1", ...)
