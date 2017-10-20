@@ -26,9 +26,18 @@ Changelog
 Unreleased
 **********
 
-Added
-=====
-- [item]
+
+**************************************
+Benchmarking Suite v2.2.1
+**************************************
+Release date: 2017-10-20
+
+This patch release fixes some minor bugs found in the code:
+
+- fixed creation of new sessions if the provider configuration is in json format
+- fixed default error handling in the REST server (now the full exception message - and not only "Internal Server Error" is sent back to the caller)
+- fixed parsing of "network" and "security_group" parameters: now they can be either the id or the name of the object
+- fixed crash of some Filebench workloads on Amazon EC2 using the micro instances
 
 
 **************************************
