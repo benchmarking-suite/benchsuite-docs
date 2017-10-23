@@ -28,7 +28,7 @@ Unreleased
 
 
 **************************************
-Benchmarking Suite v2.2.1
+Benchmarking Suite v2.2.2
 **************************************
 Release date: 2017-10-20
 
@@ -38,6 +38,15 @@ This patch release fixes some minor bugs found in the code:
 - fixed default error handling in the REST server (now the full exception message - and not only "Internal Server Error" is sent back to the caller)
 - fixed parsing of "network" and "security_group" parameters: now they can be either the id or the name of the object
 - fixed crash of some Filebench workloads on Amazon EC2 using the micro instances
+
+
+**************************************
+Benchmarking Suite v2.2.1
+**************************************
+Release date: 2017-10-18
+
+
+This patch release fixes an outdated information in the REST server documentation page
 
 
 **************************************
