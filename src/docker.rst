@@ -25,6 +25,9 @@ The Benchmarking Suite is also distributed in two different Docker containers. T
 benchsuite-multiexec
 ####################
 
+.. image:: https://img.shields.io/docker/pulls/benchsuite/benchsuite-multiexec.svg
+    :target: https://hub.docker.com/r/benchsuite/benchsuite-multiexec/
+
 This container can be used to run benchmarks in batch mode.
 
 Get (or update) the image with:
@@ -50,8 +53,11 @@ Alternatively, provider and storage configurations can be specified through envi
 
 .. TODO: complete section
 
-benchsuite-rest-server
+benchsuite-rest-service
 ######################
+
+.. image:: https://img.shields.io/docker/pulls/benchsuite/benchsuite-rest-service.svg
+    :target: https://hub.docker.com/r/benchsuite/benchsuite-rest-service/
 
 This image contains the Benchmarking Suite REST SERVER (see :ref:`rest-server-doc` section). When started, the container exposes the REST service on port 5000.
 
