@@ -32,6 +32,10 @@ Release Steps
 
 Checklist to release the Benchmarking Suite
 
+
+Modules Release
+---------------
+
 For each module to release:
 
 1. increase the version number in the ``__init__py`` file
@@ -67,7 +71,13 @@ For each module to release:
 
 4. create a release on GitHub for each module (this will also create a tag)
 
-5. Update the changelog.rst file in the documentation and the version in conf.py
+5. Update the changelog.rst file
+
+
+Milestone Release
+-----------------
+
+1. In ``benchsuite-docs``, update the version in conf.py
 
 6. Commit the documentation on GitHub and create a tag. This will also create a new tag in readthedocs
 

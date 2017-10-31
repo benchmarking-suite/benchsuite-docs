@@ -21,14 +21,20 @@ Changelog
 
 .. consider to follow this format http://keepachangelog.com/en/1.0.0/
 
+This Changelog reports the main changes occuring in the Benchmarking Suite. The versions of the Benchmarking Suite (also called Milestones) refers to the versions of the Docker containers and the Documentation, while the versions of the single modules are reported in each entry of the changelog.
+
+The Unreleased_ section contains changes already released in the Python modules, but not yet included in any Milestone.
 
 **********
 Unreleased
 **********
 
+- [core-2.2.2] considering only providers configuration files with extension .json and .conf
+- [core-2.2.3] duration is now considered as a metric
+
 
 **************************************
-Benchmarking Suite v2.2.2
+Benchmarking Suite v. 2.2.2
 **************************************
 Release date: 2017-10-20
 
@@ -41,7 +47,7 @@ This patch release fixes some minor bugs found in the code:
 
 
 **************************************
-Benchmarking Suite v2.2.1
+Benchmarking Suite v. 2.2.1
 **************************************
 Release date: 2017-10-18
 
@@ -50,7 +56,7 @@ This patch release fixes an outdated information in the REST server documentatio
 
 
 **************************************
-Benchmarking Suite v2.2.0
+Benchmarking Suite v. 2.2.0
 **************************************
 Release date: 2017-10-18
 
@@ -61,7 +67,7 @@ This minor release introduces following improvements:
 
 
 **************************************
-Benchmarking Suite v2.1.0
+Benchmarking Suite v. 2.1.0
 **************************************
 Release date: 2017-10-13
 
@@ -78,7 +84,7 @@ This minor release introduces some new functionalities and improvement to the to
 
 
 **************************************
-Benchmarking Suite v2.0.0
+Benchmarking Suite v. 2.0.0
 **************************************
 Release date: 2017-08-01
 

@@ -78,4 +78,3 @@ Also providers configuration files can be mounted in the container in the same w
 .. code-block:: bash
 
     docker run -v my-provider.conf:/providers/my-provider.conf benchsuite/benchsuite-rest-server
-

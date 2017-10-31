@@ -27,7 +27,7 @@ The Benchmarking Suite automates the benchmarking process managing the allocatio
 
 It has been designed to be extendible and allow an easy integration of new third-party benchmarking tools and cloud services. Data collected and stored during the tests execution is homogenized and aggregated on different higher-level metrics (e.g. average value) allowing performance comparisons among different providers and/or different dates.
 
-The Benchmarking Suite development has been funded by two European reasearch and innovation projects: ARTIST_ and CloudPerfect_. 
+The Benchmarking Suite development has been funded by two European reasearch and innovation projects: ARTIST_ and CloudPerfect_.
 
 
 License
@@ -43,7 +43,7 @@ Topics
 
    quick_start
    architecture
-   configuration
+   benchmarks
    executions
    cli
    rest
@@ -65,7 +65,7 @@ Main contact person for the Benchmarking Suite is:
 :Company:
     Research and Development Laboratory
     Engineering Ingegneria Informatica S.p.A.
-    
+
 :Address:
     via Riccardo Morandi, 32
     00148 Rome, Italy
@@ -84,4 +84,4 @@ References
 
 .. _ARTIST: http://www.artist-project.eu/
 .. _CloudPerfect: https://cloudperfect.eu/
-.. _`Apache License v2.0`: https://www.apache.org/licenses/LICENSE-2.0    
+.. _`Apache License v2.0`: https://www.apache.org/licenses/LICENSE-2.0
