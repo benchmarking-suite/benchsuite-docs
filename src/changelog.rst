@@ -29,8 +29,18 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
+
+**************************************
+Benchmarking Suite v. 2.3.0
+**************************************
+Release date: 2017-11-20
+
 - [core-2.2.2] considering only providers configuration files with extension .json and .conf
 - [core-2.2.3] duration is now considered as a metric
+- [stdlib-2.3.0] metrics renamed to make them coherent in different tests
+- [stdlib-2.3.0] added multiple workloads in the CFD benchmark
+- [cli-2.1.1] added --failonerror for the multiexec command. The option allows to not continue with next test if the current one fails
+- [scheduler-1.0.0] first release of the Benchsuite Scheduler
 
 
 **************************************

@@ -77,6 +77,8 @@ For each module to release:
 Milestone Release
 -----------------
 
+1. Check all the modules and the versions that will be included. Release modules if necessary
+
 1. In ``benchsuite-docs``, update the version in conf.py
 
 6. Commit the documentation on GitHub and create a tag. This will also create a new tag in readthedocs
