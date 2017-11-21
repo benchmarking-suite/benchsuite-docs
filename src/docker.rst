@@ -22,6 +22,8 @@ Docker
 The Benchmarking Suite is also distributed in two different Docker containers. They are available at https://cloud.docker.com/app/benchsuite/repository/list.
 
 
+.. _docker_multiexec_image:
+
 benchsuite-multiexec
 ####################
 
@@ -54,7 +56,7 @@ Alternatively, provider and storage configurations can be specified through envi
 .. TODO: complete section
 
 benchsuite-rest-service
-######################
+#######################
 
 .. image:: https://img.shields.io/docker/pulls/benchsuite/benchsuite-rest-service.svg
     :target: https://hub.docker.com/r/benchsuite/benchsuite-rest-service/

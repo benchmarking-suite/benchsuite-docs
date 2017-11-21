@@ -29,6 +29,9 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
+- TODO: [scheduler] add config parameter to choose whether log successful executions or not
+- TODO: [scheduler] add config parameter to add global env, tags and additional params
+
 
 **************************************
 Benchmarking Suite v. 2.3.0

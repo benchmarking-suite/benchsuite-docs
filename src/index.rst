@@ -48,6 +48,7 @@ Topics
    cli
    rest
    docker
+   scheduler
    API
    changelog
    development
