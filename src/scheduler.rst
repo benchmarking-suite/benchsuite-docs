@@ -23,6 +23,7 @@ The **schedules** are the main input to the scheduler and models the tests that 
 
     {
         "id" : "ec2-123asd-filebench",
+        "active": true,
         "provider_config_secret" : "ec2",
         "username" : "ggiammat",
         "tests" : [
@@ -44,6 +45,7 @@ The **schedules** are the main input to the scheduler and models the tests that 
 It contains:
 
 * ``id``: a unique id
+* ``active``: defined whether this schedule should be considered by the scheduler or not
 * ``provider_config_secret``: the name (or the id) of the Docker secret that contains the Cloud Provider configuration. It uses the Docker secrets because the configuration also contains the user credentials to access the Cloud Provider
 * ``username``: an identifier of the user that is requesting the execution. It will be saved also in the benchmarking results
 * ``tests``: a list of test names to execute to be passed to the benchsuite ``multiexec`` command (see :ref:`cli_documentation`)

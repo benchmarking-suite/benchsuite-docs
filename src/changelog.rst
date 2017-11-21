@@ -31,6 +31,7 @@ Unreleased
 
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 - TODO: [scheduler] add config parameter to add global env, tags and additional params
+- [core, backends] added storage of execution errors in the database
 
 
 **************************************
