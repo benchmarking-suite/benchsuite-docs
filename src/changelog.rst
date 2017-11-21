@@ -34,6 +34,13 @@ Unreleased
 
 
 **************************************
+Benchmarking Suite v. 2.3.1
+**************************************
+Release date: 2017-11-21
+
+- [core-2.2.4] fixed support for the --failonerror parameter from the command line
+
+**************************************
 Benchmarking Suite v. 2.3.0
 **************************************
 Release date: 2017-11-20
