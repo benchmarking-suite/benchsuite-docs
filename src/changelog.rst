@@ -30,7 +30,8 @@ Unreleased
 **********
 
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
-- TODO: [scheduler] add config parameter to add global env, tags and additional params
+- [scheduler] add config parameter to add global env, tags and additional params
+- [scheduler] added the "active" parameter in the schedules
 - [core, backends] added storage of execution errors in the database
 
 
