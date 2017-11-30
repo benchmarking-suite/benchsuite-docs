@@ -92,7 +92,7 @@ The optional parameters (or the ones that have a default value) are:
 * ``EXEC_DB_COLLECTION`` (default: "_apexec"): the name of the collection that contains the logs of the executions
 * ``DOCKER_HOST`` (default: "localhost:2375"): the host and port of the Docker Swarm instance (used to create containers though the Docker API)
 * ``DOCKER_BENCHSUITE_IMAGE`` (default: "benchsuite/benchsuite-multiexec"): the name of the benchsuite-multiexec image to use
-* ``DOCKER_GLOBAL_ENV``: a comma separated list of environment variables that will be set in the benchsuite-multiexec container (e.g. "VAR1=val1,var_2=val2"). Useful to set the an http proxy is necessary
+* ``DOCKER_GLOBAL_ENV``: a comma separated list of environment variables that will be set in the benchsuite-multiexec container (e.g. "VAR1=val1,var_2=val2"). Useful to set the an http proxy if necessary. Use '\,' to insert a comma in the variables names or values.
 * ``DOCKER_GLOBAL_TAGS``: a comma separated list of string that will be set as tags in the benchmarking results (e.g. "test1,scheduled,automatic")
 * ``DOCKER_ADDITIONAL_OPTS``: a string that allows to specify additional command line options that will be appended to the benchsuite-multiexec container command (e.g. "-vvv --failonerror")
 

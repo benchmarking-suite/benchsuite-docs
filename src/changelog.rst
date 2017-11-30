@@ -29,6 +29,9 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
+- [stdlib] randomize vm names
+- [stdlib] set security groups in openstack
+- TODO: [stdlib] support creation of keypairs
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 - [scheduler] add config parameter to add global env, tags and additional params
 - [scheduler] added the "active" parameter in the schedules
