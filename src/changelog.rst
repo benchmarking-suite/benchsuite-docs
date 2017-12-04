@@ -29,13 +29,20 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
-- [stdlib] randomize vm names
-- [stdlib] set security groups in openstack
 - TODO: [stdlib] support creation of keypairs
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
-- [scheduler] add config parameter to add global env, tags and additional params
-- [scheduler] added the "active" parameter in the schedules
-- [core, backends] added storage of execution errors in the database
+
+
+**************************************
+Benchmarking Suite v. 2.4.0
+**************************************
+Release date: 2017-12-04
+
+- [stdlib-2.4.0] randomize names of VMs created by the Benchmarking Suite
+- [stdlib-2.4.0] set security groups in openstack
+- [scheduler-1.1.0] add config parameter to add global env, tags and additional params
+- [scheduler-1.1.0] added the "active" parameter in the schedules
+- [core-2.3.0, backends-2.2.0] added storage of execution errors in the database
 
 
 **************************************
