@@ -32,6 +32,17 @@ Unreleased
 - TODO: [stdlib] support creation of keypairs
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 
+**************************************
+Benchmarking Suite v. 2.5.0
+**************************************
+Release date: 2017-12-18
+
+- [backends-2.3.0] MongoDB - storing start time as date object (previously it was a timestamp)
+- [scheduler-1.2.0] Support for using Docker unix socket instead of the tcp port
+- [core-2.3.1] Fixed DEFAULT section not read in the Json configuration files
+- [stdlib-2.4.1] Fixed serialization issue of the LibcloudComputeProvider objects
+- [cli-2.1.2] Improvements and fixes to the "shell" command
+
 
 **************************************
 Benchmarking Suite v. 2.4.0
