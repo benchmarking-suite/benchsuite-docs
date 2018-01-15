@@ -32,6 +32,15 @@ Unreleased
 - TODO: [stdlib] support creation of keypairs
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 
+
+**************************************
+Benchmarking Suite v. 2.5.1
+**************************************
+Release date: 2018-01-15
+
+- fixed the URL to download the DaCapo benchmark
+
+
 **************************************
 Benchmarking Suite v. 2.5.0
 **************************************
