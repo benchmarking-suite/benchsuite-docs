@@ -39,7 +39,9 @@ The **schedules** are the main input to the scheduler and models the tests that 
         },
         "interval" : {
             "hours" : 1
-        }
+        },
+        "benchsuite_additional_opts": ["-v", "--another-opt],
+        "docker_additional_opts": {"hosts": {"myhost":"10.1.0.1"}
     }
 
 It contains:
@@ -52,7 +54,8 @@ It contains:
 * ``tags``: a list of tags to assign to the results
 * ``env``: key-value pairs that define enviornment variables to be available in the execution environment during the execution
 * ``interval``: the time interval between two executions. The accepted keys are: ``weeks``, ``days``, ``hours``, ``minutes`` and ``seconds``. Multiple keys can be combined and if not specified, the default value is 0
-
+* ``benchsuite_additional_opts``: a list of string that will be appended to the benchsuite-multiexec command line
+* ``docker_additional_opts``: a dictionary of additional options to use when creating new Docker services (see DockerCreateServiceReference_ for a reference of available options)
 
 New schedules are automatically loaded and they are rescheduled if a change is detected.
 
@@ -93,8 +96,9 @@ The optional parameters (or the ones that have a default value) are:
 * ``DOCKER_HOST`` (default: "localhost:2375"): the host and port of the Docker Swarm instance (used to create containers though the Docker API)
 * ``DOCKER_BENCHSUITE_IMAGE`` (default: "benchsuite/benchsuite-multiexec"): the name of the benchsuite-multiexec image to use
 * ``DOCKER_GLOBAL_ENV``: a comma separated list of environment variables that will be set in the benchsuite-multiexec container (e.g. "VAR1=val1,var_2=val2"). Useful to set the an http proxy if necessary. Use '\,' to insert a comma in the variables names or values.
-* ``DOCKER_GLOBAL_TAGS``: a comma separated list of string that will be set as tags in the benchmarking results (e.g. "test1,scheduled,automatic")
-* ``DOCKER_ADDITIONAL_OPTS``: a string that allows to specify additional command line options that will be appended to the benchsuite-multiexec container command (e.g. "-vvv --failonerror")
+* ``BENCHSUITE_GLOBAL_TAGS``: a comma separated list of string that will be set as tags in the benchmarking results (e.g. "test1,scheduled,automatic")
+* ``DOCKER_ADDITIONAL_OPTS``: a comma separated list of options in the format 'KEY=VAL' that will be added to the Docker service create invocation. VAL is evaluated using json.loads() function. See DockerCreateServiceReference_ for a reference of available options (e.g. 'hosts={"myhost":"10.1.0.1"}')
+* ``BENCHSUITE_ADDITIONAL_OPTS``: additional options that will be set on the benchsuite-multiexec command line (e.g. "-vvv --failonerror")
 
 Benchsuite Scheduler Docker image
 ---------------------------------
@@ -121,3 +125,4 @@ The two approaches can be also be mixed.
 .. target-notes::
 
 .. _APScheduler: https://apscheduler.readthedocs.io/en/latest/
+.. _DockerCreateServiceReference: https://docker-py.readthedocs.io/en/stable/services.html

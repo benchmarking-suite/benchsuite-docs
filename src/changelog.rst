@@ -32,6 +32,12 @@ Unreleased
 - TODO: [stdlib] support creation of keypairs
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 
+**************************************
+Benchmarking Suite v. 2.6.0
+**************************************
+Release date: 2018-01-16
+
+- [scheduler-1.3.0] added configuration parameters to add additional Docker options to the containers created by the scheduler
 
 **************************************
 Benchmarking Suite v. 2.5.1
