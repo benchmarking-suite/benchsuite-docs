@@ -33,6 +33,13 @@ Unreleased
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 
 **************************************
+Benchmarking Suite v. 2.6.1
+**************************************
+Release date: 2018-01-22
+
+- [stdlib-2.4.3] support for 'auth_url', 'auth_version' and 'region' provider config parameters
+
+**************************************
 Benchmarking Suite v. 2.6.0
 **************************************
 Release date: 2018-01-16
