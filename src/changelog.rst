@@ -33,6 +33,18 @@ Unreleased
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
 
 **************************************
+Benchmarking Suite v. 2.7.0
+**************************************
+Release date: 2018-02-14
+
+- [rest-2.3.0] added options to listen on specific host and port
+- [sdtlib-2.5.0] customizable retries time for connection to new VMs
+- [stdlib-2.5.0] delete the VMs created in case of an unhandled exception during the creation
+- [stdlib-2.5.0] fixed empty values in configuration parsing
+- [core-2.4.0] added possibility to use custom sessions storage file
+- [scheduler-1.3.1] fixed invalid characters in containers name
+
+**************************************
 Benchmarking Suite v. 2.6.1
 **************************************
 Release date: 2018-01-22

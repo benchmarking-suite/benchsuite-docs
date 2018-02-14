@@ -32,6 +32,13 @@ The Benchmarking Suite Command line tool can be installed with:
 If the installation was successful, the ``benchsuite`` command should be in your path.
 
 
+Configuration
+=============
+
+The Benchmarking Suite has a configuration folder where the providers, benchmarks and storage backends configuration files are located. If not explicitly set, the configuration folder is the located in the system default configuration folder (e.g. ``/home/<user>/.config`` in Linux). It can be customized setting the ``BENCHSUITE_CONFIG_FOLDER`` env variable.
+
+
+The Benchmarking Suite stores the active benchmarking sessions data on the filesystem. By default it is located under the system default data folder (e.g. ``/Home/<user>/.local/share`` in Linux). It can be customized setting the ``BENCHSUITE_DATA_FOLDER`` env variable.
 
 Usage and Examples
 ==================

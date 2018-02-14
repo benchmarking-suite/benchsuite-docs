@@ -66,22 +66,24 @@ Since it is frequent to execute multiple tests against the same Service Provider
 Software Modules
 ================
 
-In order to address all the different use cases and the installation necessities, the Benchmarking Suite is distributed in five different software modules that can be installed separately:
+In order to address all the different use cases and the installation necessities, the Benchmarking Suite is distributed in six different software modules that can be installed separately:
 
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.core``   | the core library (all other  modules depend on it) with the definition of      |
-|                       | types and the fundamental framework for the extension of the Benchmarking      |
-|                       | Suite                                                                          |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.stdlib`` | a collection of benchmark tests configuration files and support for some Cloud |
-|                       | Providers                                                                      |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.cli``    | a bash command line tool to manage tests and results                           |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.rest``   | an HTTP server and a REST API to interact with the Benchmarking Suite          |
-+-----------------------+--------------------------------------------------------------------------------+
-| ``benchsuite.backend``| connectors for the supported storage backends                                  |
-+-----------------------+--------------------------------------------------------------------------------+
++-------------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.core``     | the core library (all other  modules depend on it) with the definition of      |
+|                         | types and the fundamental framework for the extension of the Benchmarking      |
+|                         | Suite                                                                          |
++-------------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.stdlib``   | a collection of benchmark tests configuration files and support for some Cloud |
+|                         | Providers                                                                      |
++-------------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.cli``      | a bash command line tool to manage tests and results                           |
++-------------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.rest``     | an HTTP server and a REST API to interact with the Benchmarking Suite          |
++-------------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.backend``  | connectors for the supported storage backends                                  |
++-------------------------+--------------------------------------------------------------------------------+
+| ``benchsuite.scheduler``| a service to automatically execute periodic benchmarks                         |
++-------------------------+--------------------------------------------------------------------------------+
 
 
 
