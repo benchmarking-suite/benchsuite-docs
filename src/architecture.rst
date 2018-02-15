@@ -28,6 +28,7 @@ The Benchmarking Suite is composed by five main components summarized in the fol
 - **CLI**: a command line tool (bash-compatible) to access all the Benchmarking Suite functionalities;
 - **Std Library**: a set of selected benchmark tools, including their configurations and the implementation of the required wrapping scripts for the execution and the parsing of results;
 - **Backend Connectors**: a set of connectors to store the Benchmarking Suite executions results on different storage technologies (e.g. MySQL, MongoDB).
+- **Scheduler**: a service that periodically executes a benchmarking session;
 
 The *Core* component is the only required component, the other components are optional. However the Benchmarking Suite installation will miss the functionalities of not-installed modules (e.g. if the *Backend Connectors* is not installed, the execution results will not be stored).
 
