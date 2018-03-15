@@ -142,7 +142,8 @@ A better documentation for the REST API can be found directly in the REST Server
 1. Launch the server
 2. Open http://localhost:5000/api/v1/
 
-.. swaggerv2doc:: file://{{currentDir}}/swagger-apiv1.json
+
+.. swaggerv2doc:: file://{{currentDir}}/swagger-api.json
 
 
 ..  _sphinx-swaggerdoc: https://github.com/unaguil/sphinx-swaggerdoc

@@ -193,10 +193,12 @@ texinfo_documents = [
 #
 
 import os
-from benchsuite.rest.app import dump_swagger_specs
+from benchsuite.rest.app import generate_swagger_specs
 
-if not os.path.isfile('swagger-apiv1.json'):
-    dump_swagger_specs()
+if not os.path.isfile('swagger-api.json'):
+    with open("swagger-api.json", "w") as fout:
+        fout.write(generate_swagger_specs())
+
 
 cwd = os.getcwd()
 
