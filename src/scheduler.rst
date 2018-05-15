@@ -34,6 +34,10 @@ The **schedules** are the main input to the scheduler and models the tests that 
         "tags" : [
             "scheduled"
         ],
+        "properties" : {
+            "prop1" : "val1",
+            "prop2" : "prop2"
+        },
         "env" : {
             "MYVAR": "val"
         },
@@ -41,7 +45,9 @@ The **schedules** are the main input to the scheduler and models the tests that 
             "hours" : 1
         },
         "benchsuite_additional_opts": ["-v", "--another-opt],
-        "docker_additional_opts": {"hosts": {"myhost":"10.1.0.1"}
+        "docker_additional_opts": {
+            "hosts": {"myhost":"10.1.0.1"}
+        }
     }
 
 It contains:
@@ -52,6 +58,7 @@ It contains:
 * ``username``: an identifier of the user that is requesting the execution. It will be saved also in the benchmarking results
 * ``tests``: a list of test names to execute to be passed to the benchsuite ``multiexec`` command (see :ref:`cli_documentation`)
 * ``tags``: a list of tags to assign to the results
+* ``properties``: a list of key-value properties that will be assigned to the results
 * ``env``: key-value pairs that define enviornment variables to be available in the execution environment during the execution
 * ``interval``: the time interval between two executions. The accepted keys are: ``weeks``, ``days``, ``hours``, ``minutes`` and ``seconds``. Multiple keys can be combined and if not specified, the default value is 0
 * ``benchsuite_additional_opts``: a list of string that will be appended to the benchsuite-multiexec command line

@@ -29,8 +29,10 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
-- TODO: [stdlib] support creation of keypairs
 - TODO: [scheduler] add config parameter to choose whether log successful executions or not
+- [stdlib] add async executions
+- [stdlib] support creation of key pairs if not provided in the configuration
+- [scheduler] updated to docker-py version 3.0.0
 
 **************************************
 Benchmarking Suite v. 2.7.0
