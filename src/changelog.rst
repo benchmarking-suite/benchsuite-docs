@@ -29,10 +29,25 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
-- TODO: [scheduler] add config parameter to choose whether log successful executions or not
-- [stdlib] add async executions
-- [stdlib] support creation of key pairs if not provided in the configuration
-- [scheduler] updated to docker-py version 3.0.0
+**************************************
+Benchmarking Suite v. 3.0.0
+**************************************
+Release date: 2018-08-08
+
+- [stdlib-2.6.0] added Web Frameworks Benchmarking tool
+- [stdlib-2.6.0] added category and keywords for each workload
+- [stdlib-2.6.0] auto-discovery (when possible) of networks, security groups and platforms
+- [stdlib-2.6.0] add async executions to avoid timeout exceptions
+- [stdlib-2.6.0] support creation of key pairs if not provided in the configuration
+- [scheduler-1.4.0] updated to docker-py version 3.0.0
+- [scheduler-1.4.0] improved logging of exceptions
+- [scheduler-1.4.0] added "properties" field in schedules to store custom data in generated results
+- [cli-2.2.0] introduced autocomplete for some commands
+- [backends-2.4.0] store execution errors and logs in the backend
+- [backends-2.4.0] changed results schema
+- [core-2.5.0] fixed crash if the storage was not properly configured
+- [core-2.5.0] allowed to use wildecards in workload names in multiexec mode
+
 
 **************************************
 Benchmarking Suite v. 2.7.0
