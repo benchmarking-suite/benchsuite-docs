@@ -18,7 +18,6 @@
 # CloudPerfect EU project (https://cloudperfect.eu/)ù
 
 
-pip
 setuptools
 
 
