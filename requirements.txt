@@ -18,9 +18,6 @@
 # CloudPerfect EU project (https://cloudperfect.eu/)ù
 
 
-setuptools
-
-
 #
 # Autodoc needed modules
 #
