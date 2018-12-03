@@ -37,6 +37,7 @@ The following table summarizes the tools available and their compatibility with 
     CFD,            1.0,        ✗, ✓, ✗
     DaCapo,         9.12,       ✓, ✓, ✗
     Filebench,      1.4.9.1,    ✓, ✓, ✓
+    Iperf,          2.0.5,      ✗, ✓, ✓
     YCSB-MySQL,     0.12.0,     ✓, ✓, ✗
     YCSB-MongoDB,   0.11.0,     ✓, ✓, ✗
     WebFrameworks,  master,     ✗, ✓, ✓
@@ -133,10 +134,62 @@ Metrics
     cputime, µs, The average cpu time taken by each operation
     latency_avg, µs, The average duration of each operation
 
+Iperf
+=====
+
+IPerf [5]_ is a benchmarking tool to measure the maximum achievable bandwidth on IP networks. It provides statistics both for TCP and UDP protocols.
+
+In the Benchmarking Suite, the following pre-defined workloads have been created:
+
+.. csv-table::
+    :widths: auto
+
+    tcp_10_1, transfer data over a single TCP connections for 10 seconds
+    tcp_10_10, transfer data over 10 parallel TCP connections for 10 seconds
+    udp_10_1_1, transfer UDP packets over a single connection with a maximum bandwidth limited at 1MBit/s
+    udp_10_1_10, transfer UDP packets over a single connection with a maximum bandwidth limited at 10MBit/s
+    udp_10_10_10, transfer UDP packets over 10 parallel connections with a maximum bandwidth limited at 1MBit/s
+
+Metrics
+-------
+
+For the TCP workloads:
+
+.. csv-table::
+    :widths: auto
+    :header: Metric, Unit, Description
+
+    duration, s, The overall duration of the test
+    transferred_x, bytes, data transferred for the connection x
+    bandwidth_x, bit/s, bandwidth fo the connection x
+    transferred_sum, bytes, sum of data transferred in all connections
+    bandwidth_sum, bit/s, sum of bandwidth of all connections
+
+For the UDP workloads:
+
+.. csv-table::
+    :widths: auto
+    :header: Metric, Unit, Description
+
+    duration, s, The overall duration of the test
+    transferred_x, bytes, data transferred over connection x
+    bandwidth_x, bit/s, bandwidth of connection x
+    total_datagrams_x, num, number of UDP packets sent over connection x
+    lost_datagrams_x, num, number of lost UDP packets over connection x
+    jitter_x, ms, latency of connection x
+    outoforder_x, num, number of packets received by the server in the wrong order
+    transferred_avg, bytes, average data transferred by each connection
+    bandwidth, bit/s, average bandwidth of each connection
+    total_datagrams_avg, num, average number of packets sent over each connection
+    lost_datagrams_avg, num, average number of packets lost for each connection
+    jitter_avg, ms, average latency
+    outoforder_avg, num, average number of packets received in the wrong order
+
+
 YCSB
 ====
 
-YCSB [5]_ is a database benchmarking tool. It has the support for several database technologies and provides a configuration mechanism to simulate different usages.
+YCSB [6]_ is a database benchmarking tool. It has the support for several database technologies and provides a configuration mechanism to simulate different usages.
 
 In the Benchmarking Suite, YCSB is used to benchmark two of the most popular database servers: **MySQL** and **MongoDB**.
 
@@ -183,9 +236,9 @@ Metrics
 
 WebFrameworks
 =============
-This is an open source tool [6]_ used to compare many web application frameworks executing fundamental tasks such as JSON serialization, database access, and server-side template composition. The tool has been developed and it is used to run the tests that generate the results available at: https://www.techempower.com/benchmarks/.
+This is an open source tool [7]_ used to compare many web application frameworks executing fundamental tasks such as JSON serialization, database access, and server-side template composition. The tool has been developed and it is used to run the tests that generate the results available at: https://www.techempower.com/benchmarks/.
 
-Currently, in the Benchmarking Suite the framework supported are: **Django**, **Spring** and **CakePHP**.
+Currently, in the Benchmarking Suite the framework supported are: **Django**, **Spring**, **CakePHP**, **Flask**, **FastHttp** and **NodeJS**.
 
 For each framework the following tests are executed:
 
@@ -224,5 +277,6 @@ Metrics
 .. [2] CFD Benchmark Case code: https://github.com/benchmarking-suite/cfd-benchmark-case
 .. [3] DaCapo homepage: http://www.dacapobench.org/
 .. [4] Filebench homepage: https://github.com/filebench/filebench/wiki
-.. [5] YCSB homepage: https://github.com/brianfrankcooper/YCSB/wiki
-.. [6] Web Framewoks Benchmarking code: https://github.com/TechEmpower/FrameworkBenchmarks
+.. [5] IPerf homepage: https://iperf.fr/
+.. [6] YCSB homepage: https://github.com/brianfrankcooper/YCSB/wiki
+.. [7] Web Framewoks Benchmarking code: https://github.com/TechEmpower/FrameworkBenchmarks
