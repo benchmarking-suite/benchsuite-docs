@@ -24,6 +24,8 @@ The Benchmarking Suite comes with a set of third-party benchmarking tools, each 
 - **CFD**: a tool realized in the CloudPerfect EU project [1]_ that uses OpenFOAM to run a waterbox simulation. Can be configured with different solvers, number of iterations and write to disk strategies. It is primarily a CPU intensive benchmark;
 - **DaCapo**: a tool for Java benchmarking simulating real world applications with non-trivial memory loads. It is mainly a CPU and memory intensive benchmark;
 - **Filebench**: a powerful and flexible tool able to generate and execute a variety of filesystem workloads to simulate applications like Web servers, File servers, Video services. It is mainly a Disk intensive benchmark;
+- **Iperf**: is a tool for active measurements of the maximum achievable bandwidth on IP networks;
+- **Sysbench**: a tool to test CPU, memory, file I/O, mutex performance and MySQL on Linux systems;
 - **YCSB**: a tool for database benchmarking that supports several database technologies. In the Benchmarking Suite, tests for Mysql and MongoDB are provided. It is primarily a Disk intensive benchmark;
 - **WebFrameworks**: tests common web frameworks workloads like fetching and inserting data in a database or create/parse json objects. It is mainly a Memory and Network intensive benchmark;
 
@@ -38,6 +40,7 @@ The following table summarizes the tools available and their compatibility with 
     DaCapo,         9.12,       ✓, ✓, ✗
     Filebench,      1.4.9.1,    ✓, ✓, ✓
     Iperf,          2.0.5,      ✗, ✓, ✓
+    Sysbench,       2.1.0,      ✗, ✓, ✓
     YCSB-MySQL,     0.12.0,     ✓, ✓, ✗
     YCSB-MongoDB,   0.11.0,     ✓, ✓, ✗
     WebFrameworks,  master,     ✗, ✓, ✓
@@ -186,10 +189,35 @@ For the UDP workloads:
     outoforder_avg, num, average number of packets received in the wrong order
 
 
+Sysbench
+========
+
+SysBench [6]_ is a modular, cross-platform and multi-threaded benchmark tool for evaluating CPU, memory, file I/O, mutex performance, and even MySQL benchmarking. At the moment, in the Benchmarking Suite only the CPU benchmarking capabilities are integrated.
+
+.. csv-table::
+    :widths: auto
+
+    cpu_10000, "Verifies prime numbers between 0 and 20000  by doing standard division of the number by all numbers between 2 and the square root of the number. This is repeated 1000 times and using 1, 2, 4, 8, 16 and 32 threads"
+
+Metrics
+-------
+
+
+.. csv-table::
+    :widths: auto
+    :header: Metric, Unit, Description
+
+    events_rate_X, num/s, the number of times prime numbers between 0 and 20000 are verified each second with X threads
+    total_time_X, s, total number of seconds it took to execute the 1000 cycles with X threads
+    latency_min_X, ms, minimum time it took for a cycle
+    latency_max_X, ms, maximum time it took for a cycle
+    latency_avg_X, ms, average time the 1000 cycles took. It gives a good measure of the cpu speed
+    latency_95_X, ms, 95th percentile of the latency times.
+
 YCSB
 ====
 
-YCSB [6]_ is a database benchmarking tool. It has the support for several database technologies and provides a configuration mechanism to simulate different usages.
+YCSB [7]_ is a database benchmarking tool. It has the support for several database technologies and provides a configuration mechanism to simulate different usages.
 
 In the Benchmarking Suite, YCSB is used to benchmark two of the most popular database servers: **MySQL** and **MongoDB**.
 
@@ -236,7 +264,7 @@ Metrics
 
 WebFrameworks
 =============
-This is an open source tool [7]_ used to compare many web application frameworks executing fundamental tasks such as JSON serialization, database access, and server-side template composition. The tool has been developed and it is used to run the tests that generate the results available at: https://www.techempower.com/benchmarks/.
+This is an open source tool [8]_ used to compare many web application frameworks executing fundamental tasks such as JSON serialization, database access, and server-side template composition. The tool has been developed and it is used to run the tests that generate the results available at: https://www.techempower.com/benchmarks/.
 
 Currently, in the Benchmarking Suite the framework supported are: **Django**, **Spring**, **CakePHP**, **Flask**, **FastHttp** and **NodeJS**.
 
@@ -278,5 +306,6 @@ Metrics
 .. [3] DaCapo homepage: http://www.dacapobench.org/
 .. [4] Filebench homepage: https://github.com/filebench/filebench/wiki
 .. [5] IPerf homepage: https://iperf.fr/
-.. [6] YCSB homepage: https://github.com/brianfrankcooper/YCSB/wiki
-.. [7] Web Framewoks Benchmarking code: https://github.com/TechEmpower/FrameworkBenchmarks
+.. [6] Sysbench homepage: https://github.com/akopytov/sysbench
+.. [7] YCSB homepage: https://github.com/brianfrankcooper/YCSB/wiki
+.. [8] Web Framewoks Benchmarking code: https://github.com/TechEmpower/FrameworkBenchmarks

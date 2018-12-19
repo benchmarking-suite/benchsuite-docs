@@ -29,6 +29,24 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
+- [stdlib-2.7.0] reduced number of testing queries for YCSB benchmarks (reducing the overall duration of the tests)
+- [stdlib-2.7.0] added Ubuntu 14 compatibility for Web Framework benchmark
+- [stdlib-2.7.0] more robust ssh connections (retry on network failure for a fixed number of times)
+- [stdlib-2.7.0] new version of Paramiko ssh library that brings security patches
+- [stdlib-2.7.0] increasing waiting time in YCSB test for MongoDB to start
+- [stdlib-2.7.0] implemented multi-node benchmark tests with custom number and names of nodes
+- [stdlib-2.7.0] added IPerf benchmark with various pre-defined workloads
+- [stdlib-2.7.0] added Sysbench benchmark with various pre-defined workloads
+- [core-2.6.0] added option to keep the environment after a multiexec execution
+- [core-2.6.0] added option in multiexec mode to retry a failed test
+- [core-2.6.0] added option to retry (--max-retry) tests if they fail
+- [core-2.6.0] improved handling of logs in multi-node tests
+- [scheduler-1.5.0] improved logging of executions
+- [scheduler-1.5.0] added debug option that not delete containers after they end
+- [backends-2.5.0] updated result records schema to version 2: include all logs of multi-node tests
+- [cli-2.3.0] improved log messages
+
+
 **************************************
 Benchmarking Suite v. 3.0.0
 **************************************
