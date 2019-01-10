@@ -60,25 +60,18 @@ Open and edit ``my-amazon.conf``
 
     [provider]
     class = benchsuite.provider.libcloud.LibcloudComputeProvider
-
     type = ec2
 
     access_id = <your access_id>
     secret_key = <your secret_key>
 
-    region = us-west-1
-    ex_security_group_ids = <id of the security group>
-    ex_subnet = <id of the subnet>
-
     [ubuntu_micro]
     image = ami-73f7da13
     size = t2.micro
-    key_name = <your keypair name>
-    key_path = <path to your private key file>
-    vm_user = ubuntu
-    platform = ubuntu_16
 
-In this case we will provide this file directly to the command line tool, but we can also configure our own configuration directory, put all our service providers and benchmarking tests configuration there and refer to them by name (see XXX seciton).
+In this case we will provide this file directly to the command line tool, but we can also configure our own configuration directory, put all our service providers and benchmarking tests configuration there and refer to them by name.
+
+(Full specification of the configuration files syntax, can be found in the "Service Providers" sections).
 
 
 Run!
@@ -87,7 +80,7 @@ Now you can execute your first benchmark test:
 
 .. code-block:: bash
 
-    benchsuite multiexec --provider my-amazon.conf --service ubuntu_micro ycsb-mongodb:WorkloadA
+    benchsuite multiexec --provider my-amazon.conf --service ubuntu_micro ycsb-mongodb:workloada
 
 
 

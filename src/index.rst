@@ -44,7 +44,7 @@ Topics
    quick_start
    architecture
    benchmarks
-   executions
+   providers
    cli
    rest
    docker
