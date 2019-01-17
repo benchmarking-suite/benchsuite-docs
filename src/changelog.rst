@@ -29,6 +29,11 @@ The Unreleased_ section contains changes already released in the Python modules,
 Unreleased
 **********
 
+**************************************
+Benchmarking Suite v. 3.1.0
+**************************************
+Release date: 2019-01-17
+
 - [stdlib-2.7.0] reduced number of testing queries for YCSB benchmarks (reducing the overall duration of the tests)
 - [stdlib-2.7.0] added Ubuntu 14 compatibility for Web Framework benchmark
 - [stdlib-2.7.0] more robust ssh connections (retry on network failure for a fixed number of times)
@@ -41,6 +46,7 @@ Unreleased
 - [core-2.6.0] added option in multiexec mode to retry a failed test
 - [core-2.6.0] added option to retry (--max-retry) tests if they fail
 - [core-2.6.0] improved handling of logs in multi-node tests
+- [core-2.6.0] improved execution of clean-up scripts
 - [scheduler-1.5.0] improved logging of executions
 - [scheduler-1.5.0] added debug option that not delete containers after they end
 - [backends-2.5.0] updated result records schema to version 2: include all logs of multi-node tests
