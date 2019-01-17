@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Benchmarking Suite'
-copyright = '2017, Engineering Ingegneria Informatica S.p.A.'
+copyright = '2017-2019, Engineering Ingegneria Informatica S.p.A.'
 author = 'Gabriele Giammatteo'
 
 # The version info for the project you're documenting, acts as replacement for
