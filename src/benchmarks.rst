@@ -301,6 +301,71 @@ Metrics
     latencyMax_N, s, the maximum latency between a request and its response for the N concurrency level*
     latencyStdev_N, s, the standard deviation measure for the latency for the N concurrency level*
 
+
+
+
+Adding a new benchmarking tools
+===============================
+
+In addition to the benchmarking tests coming with the standard Benchmarking Suite release, it is possible to add new benchmarking tools by providing a configuration file to instruct the Benchmarking Suite how to install, configure and execute the tool.
+
+The configuration file must contain on section ``[DEFAULT]`` with the commands to install and execute the benchmarking tool, plus one or more sections that define different sets of input parameters to the tool. In this way, it is possible to execute the same tool to generate multiple workloads.
+
+.. code-block:: ini
+
+    [DEFAULT]
+    class = benchsuite.stdlib.benchmark.vm_benchmark.BashCommandBenchmark
+
+
+    #
+    # install, install_ubuntu, install_centos_7 are all valid keys
+    install_<platform> =
+        echo "these are the..."
+        echo "...install %(option1)s commands"
+
+    execute_<platform> =
+        echo "execute commands"
+
+    cleanup =
+        echo "commands to cleanup the %(option2)s environment"
+
+
+
+    [workload_1]
+    option1 = value1
+    option2 = value
+
+    [workload_n]
+    option1 = value1
+    option2 = valueN
+
+
+For instance, a very minimal configuration file to integrate the Sysbench [6]_ benchmarking tool is shown below:
+
+.. code-block:: ini
+
+    [DEFAULT]
+    class = benchsuite.stdlib.benchmark.vm_benchmark.BashCommandBenchmark
+
+    install =
+        curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.deb.sh | sudo bash
+        sudo apt-get -yq install sysbench
+        sysbench %(test)s prepare %(options)s
+
+    execute =
+        sysbench %(test)s run %(options)s --time=0
+
+    cleanup =
+        sysbench %(test)s cleanup %(options)s
+
+    [cpu_workload1]
+        test = cpu
+        options = --cpu-max-prime=20000 --events=10000
+
+
+Configuration files of the benchmarks included in the Benchmarking Suite releases can be used as starting point and are available here [10]_
+
+
 .. [1] CloudPerect project homepage: http://cloudperfect.eu/
 .. [2] CFD Benchmark Case code: https://github.com/benchmarking-suite/cfd-benchmark-case
 .. [3] DaCapo homepage: http://www.dacapobench.org/
@@ -309,3 +374,4 @@ Metrics
 .. [6] Sysbench homepage: https://github.com/akopytov/sysbench
 .. [7] YCSB homepage: https://github.com/brianfrankcooper/YCSB/wiki
 .. [8] Web Framewoks Benchmarking code: https://github.com/TechEmpower/FrameworkBenchmarks
+.. [10] Benchmark configuartion files: https://github.com/benchmarking-suite/benchsuite-stdlib/tree/master/data/benchmarks
