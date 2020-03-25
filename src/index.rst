@@ -50,6 +50,7 @@ Topics
    docker
    scheduler
    API
+   resources
    changelog
    development
    faq
