@@ -32,5 +32,5 @@ sphinx-argparse
 -e git+https://github.com/gabrielegiammatteo/sphinx-swaggerdoc#egg=sphinxcontrib-swaggerdoc
 
 # fix version of some dependencies that introduce breaking changes in newer versions
-Werkzeug==0.16.1
+Werkzeug==2.2.3
 Sphinx==1.8.5
